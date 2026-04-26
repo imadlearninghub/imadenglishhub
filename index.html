@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,19 +12,16 @@ header{background:#161b22;padding:20px;text-align:center;font-size:28px;color:#5
 .sidebar{width:260px;background:#161b22;padding:20px}
 .sidebar button{
 width:100%;padding:12px;margin:8px 0;
-background:#21262d;color:#fff;border:none;
-border-radius:8px;cursor:pointer
+background:#21262d;color:#fff;border:none;border-radius:8px;cursor:pointer
 }
 .sidebar button:hover{background:#58a6ff}
 .main{flex:1;padding:25px}
 .card{
-background:#161b22;padding:20px;
-border-radius:12px;margin-bottom:20px;
-border:1px solid #30363d
+background:#161b22;padding:25px;border-radius:12px;
+border:1px solid #30363d;margin-bottom:20px;line-height:1.8
 }
 .hide{display:none}
-h2{color:#58a6ff;margin-bottom:10px}
-ul{padding-left:20px;line-height:1.8}
+h2{color:#58a6ff;margin-bottom:15px}
 input{
 width:100%;padding:12px;margin:10px 0;
 border:none;border-radius:8px;background:#21262d;color:#fff
@@ -43,8 +40,8 @@ border:none;border-radius:8px;width:100%;cursor:pointer
 <div id="loginPage" class="login">
 <div class="card">
 <h2>Student Login</h2>
-<input type="text" id="email" placeholder="Email">
-<input type="password" id="pass" placeholder="Password">
+<input id="email" placeholder="Email">
+<input id="pass" type="password" placeholder="Password">
 <button class="btn" onclick="login()">Login</button>
 <p id="msg"></p>
 </div>
@@ -55,12 +52,10 @@ border:none;border-radius:8px;width:100%;cursor:pointer
 <div class="sidebar">
 <button onclick="show('home')">Home</button>
 <button onclick="show('basic')">Basic English</button>
-<button onclick="show('intermediate')">Intermediate</button>
-<button onclick="show('advanced')">Advanced</button>
-<button onclick="show('ielts')">IELTS Zone</button>
-<button onclick="show('notes')">Notes</button>
-<button onclick="show('tests')">Tests</button>
+<button onclick="show('grammar')">Grammar Notes</button>
 <button onclick="show('speaking')">Speaking</button>
+<button onclick="show('ielts')">IELTS</button>
+<button onclick="show('tests')">Tests</button>
 <button onclick="logout()">Logout</button>
 </div>
 
@@ -69,94 +64,77 @@ border:none;border-radius:8px;width:100%;cursor:pointer
 <div id="home" class="page">
 <div class="card">
 <h2>Welcome Student</h2>
-<p>Start learning from sidebar menu.</p>
+<p>This academy helps you learn English from basic to advanced level. Use the left menu to open lessons, notes, IELTS practice, speaking tasks, and tests. Read daily and improve your communication skills.</p>
 </div>
 </div>
 
 <div id="basic" class="page hide">
 <div class="card">
-<h2>Basic English Course</h2>
-<ul>
-<li>Alphabet A-Z</li>
-<li>Greetings: Hello, How are you?</li>
-<li>Daily Sentences</li>
-<li>Noun, Pronoun, Verb</li>
-<li>50 Basic Vocabulary Words</li>
-</ul>
+<h2>Basic English Lesson</h2>
+<p><b>What is English?</b><br>
+English is an international language used for communication, business, study, and travel. Learning English helps you grow professionally.</p>
+
+<p><b>Daily Sentences:</b><br>
+How are you?<br>
+I am fine.<br>
+What is your name?<br>
+My name is Imad.</p>
+
+<p><b>Practice:</b><br>
+Write five sentences about yourself in English.</p>
 </div>
 </div>
 
-<div id="intermediate" class="page hide">
+<div id="grammar" class="page hide">
 <div class="card">
-<h2>Intermediate English</h2>
-<ul>
-<li>Present / Past / Future Tenses</li>
-<li>Paragraph Writing</li>
-<li>Conversation Practice</li>
-<li>Email Writing</li>
-<li>100 Mid Vocabulary Words</li>
-</ul>
-</div>
-</div>
+<h2>Grammar Notes</h2>
+<p><b>Noun:</b> A noun is the name of a person, place, animal, or thing.<br>
+Examples: Ali, Karachi, Cat, Book.</p>
 
-<div id="advanced" class="page hide">
-<div class="card">
-<h2>Advanced English</h2>
-<ul>
-<li>Professional Communication</li>
-<li>Interview Speaking</li>
-<li>Business English</li>
-<li>Advanced Grammar</li>
-<li>200 Advanced Vocabulary</li>
-</ul>
-</div>
-</div>
+<p><b>Pronoun:</b> A pronoun is used instead of a noun.<br>
+Examples: He, She, It, They.</p>
 
-<div id="ielts" class="page hide">
-<div class="card">
-<h2>IELTS Preparation</h2>
-<ul>
-<li>Reading Strategies</li>
-<li>Listening Practice</li>
-<li>Writing Task 1 & 2</li>
-<li>Speaking Cue Cards</li>
-<li>Band 7+ Tips</li>
-</ul>
-</div>
-</div>
+<p><b>Verb:</b> A verb shows action.<br>
+Examples: Run, Eat, Write.</p>
 
-<div id="notes" class="page hide">
-<div class="card">
-<h2>Study Notes</h2>
-<ul>
-<li>Tenses Summary Notes</li>
-<li>Vocabulary Sheets</li>
-<li>Grammar Rules</li>
-<li>Daily Study Plan</li>
-</ul>
-</div>
-</div>
-
-<div id="tests" class="page hide">
-<div class="card">
-<h2>Online Test</h2>
-<p>Question: Choose correct sentence</p>
-<ul>
-<li>A) He go to school</li>
-<li>B) He goes to school</li>
-</ul>
-<button class="btn" onclick="alert('Correct Answer: B')">Show Answer</button>
+<p><b>Exercise:</b><br>
+Find noun and verb in sentence: Ali reads a book.</p>
 </div>
 </div>
 
 <div id="speaking" class="page hide">
 <div class="card">
 <h2>Speaking Practice</h2>
-<ul>
-<li>Introduce yourself in English.</li>
-<li>Describe your hometown.</li>
-<li>Talk about your future goals.</li>
-</ul>
+<p><b>Topic 1:</b> Introduce yourself in English.</p>
+<p><b>Sample:</b> My name is Imad. I am from Pakistan. I want to improve my English.</p>
+
+<p><b>Topic 2:</b> Describe your hometown.</p>
+<p><b>Sample:</b> My hometown is peaceful and beautiful. People are friendly there.</p>
+</div>
+</div>
+
+<div id="ielts" class="page hide">
+<div class="card">
+<h2>IELTS Preparation</h2>
+<p><b>Speaking Part 1:</b><br>
+Where do you live?<br>
+I live in Pakistan. It is a beautiful country with rich culture.</p>
+
+<p><b>Writing Tip:</b><br>
+Use clear grammar, formal vocabulary, and proper paragraph structure.</p>
+
+<p><b>Reading Tip:</b><br>
+Skim the passage first, then scan for answers.</p>
+</div>
+</div>
+
+<div id="tests" class="page hide">
+<div class="card">
+<h2>Mini Test</h2>
+<p>Choose correct sentence:</p>
+<p>A) She go to market.</p>
+<p>B) She goes to market.</p>
+<button class="btn" onclick="alert('Correct Answer: B')">Show Answer</button>
 </div>
 </div>
 
@@ -169,7 +147,7 @@ if(email.value && pass.value){
 loginPage.classList.add('hide');
 app.classList.remove('hide');
 }else{
-msg.innerHTML="Enter Email & Password";
+msg.innerHTML='Enter Email & Password';
 }
 }
 function logout(){location.reload();}
