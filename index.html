@@ -1,31 +1,229 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Imaduddin English Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imaduddin English Learning Hub</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:#0f172a;color:#fff}header{padding:40px;text-align:center;background:linear-gradient(135deg,#1e293b,#2563eb)}h1{font-size:42px}nav{display:flex;justify-content:center;gap:15px;padding:15px;background:#111827;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;padding:10px 16px;background:#1f2937;border-radius:10px}section{padding:40px;max-width:1200px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.card{background:#1e293b;padding:25px;border-radius:18px;box-shadow:0 10px 20px rgba(0,0,0,.3)}button{padding:12px 18px;border:none;border-radius:10px;background:#2563eb;color:#fff;cursor:pointer}.hero{font-size:20px;color:#cbd5e1;margin-top:10px}footer{text-align:center;padding:25px;background:#111827;margin-top:30px}.test-box,.speak-box{text-align:center}.hidden{display:none}input{width:100%;padding:12px;border-radius:10px;border:none;margin:8px 0}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+body{
+background:#0d1117;
+color:#fff;
+}
+header{
+background:#161b22;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#58a6ff;
+border-bottom:1px solid #30363d;
+}
+.container{
+display:flex;
+min-height:100vh;
+}
+.sidebar{
+width:250px;
+background:#161b22;
+padding:20px;
+border-right:1px solid #30363d;
+}
+.sidebar h2{
+margin-bottom:20px;
+color:#58a6ff;
+}
+.sidebar button{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#21262d;
+color:#fff;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+.sidebar button:hover{
+background:#58a6ff;
+}
+.main{
+flex:1;
+padding:30px;
+}
+.card{
+background:#161b22;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+border:1px solid #30363d;
+}
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+background:#21262d;
+color:#fff;
+}
+.login-box{
+max-width:400px;
+margin:auto;
+margin-top:80px;
+}
+.btn{
+background:#58a6ff;
+color:#fff;
+padding:12px;
+border:none;
+width:100%;
+border-radius:8px;
+cursor:pointer;
+}
+.progress{
+background:#21262d;
+height:12px;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+.progress-bar{
+height:100%;
+background:#58a6ff;
+width:65%;
+}
+.hide{
+display:none;
+}
 </style>
 </head>
 <body>
-<header><h1>Imaduddin English Learning Hub</h1><p class='hero'>Basic to Advanced English • IELTS Zone • Speaking Practice</p></header>
-<nav><a href='#dashboard'>Portal</a><a href='#courses'>Courses</a><a href='#notes'>Notes</a><a href='#tests'>Tests</a><a href='#speaking'>Speaking</a><a href='#login'>Login</a></nav>
-<section id='courses'><div class='grid'>
-<div class='card'><h2>Basic English</h2><p>Grammar, vocabulary, daily use English, greetings.</p><button onclick="showLesson('Basic English Lessons: Alphabet, Greetings, Daily Sentences, Basic Grammar, Easy Vocabulary.')">Study Now</button></div>
-<div class='card'><h2>Intermediate English</h2><p>Communication, tenses, writing, conversation skills.</p><button onclick="showLesson('Intermediate Lessons: Present/Past/Future Tenses, Paragraph Writing, Communication Skills.')">Study Now</button></div>
-<div class='card'><h2>Advanced English</h2><p>Professional fluency, refined grammar, advanced vocabulary.</p><button onclick="showLesson('Advanced Lessons: Professional Fluency, Advanced Vocabulary, Formal Communication.')">Study Now</button></div>
-<div class='card'><h2>IELTS Zone</h2><p>Listening, Reading, Writing, Speaking mock practice.</p><button onclick="showLesson('IELTS Lessons: Reading Strategies, Listening Practice, Writing Task 1 & 2, Speaking Mock Test.')">Study Now</button></div>
-</div></section>
-<section id='dashboard'><div class='card'><h2>Student Portal</h2><p>Welcome to your academy portal. Study all modules from one place.</p><div class='grid'><div class='card'><h3>Basic Lessons</h3><p>Grammar, sentences, beginner practice.</p><button onclick="showLesson('Basic Module: Alphabet, Pronouns, Daily Use Sentences, Basic Grammar Practice.')">Enter</button></div><div class='card'><h3>Intermediate Room</h3><p>Tenses, speaking, writing growth.</p><button onclick="showLesson('Intermediate Module: Tenses Mastery, Communication, Writing Tasks, Spoken English.')">Enter</button></div><div class='card'><h3>Advanced Room</h3><p>Professional fluency and vocabulary.</p><button onclick="showLesson('Advanced Module: Professional English, Interview Speaking, Advanced Vocabulary.')">Enter</button></div><div class='card'><h3>IELTS Center</h3><p>Reading, Listening, Writing, Speaking.</p><button onclick="showLesson('IELTS Module: Reading Passages, Listening Audio Tasks, Writing Task 1/2, Speaking Cue Cards.')">Enter</button></div></div></div></section><section id='lessons'><div class='grid'><div class='card'><h2>Lesson 1: Basic Grammar</h2><p>Nouns, Pronouns, Verbs, Sentence Basics.</p></div><div class='card'><h2>Lesson 2: Intermediate Tenses</h2><p>Present, Past, Future with usage practice.</p></div><div class='card'><h2>Lesson 3: Advanced Vocabulary</h2><p>Professional words, fluent expressions, band score language.</p></div><div class='card'><h2>IELTS Preparation</h2><p>Reading strategies, Writing tasks, Listening tips, Speaking cues.</p></div></div></section><section id='notes'><div class='card'><h2>Study Notes</h2><p>Grammar notes, vocabulary sheets, IELTS plans, daily speaking topics.</p><button onclick="showLesson('Notes: Noun, Pronoun, Verb rules. Vocabulary List: achieve, improve, develop. IELTS Plan: Practice daily 1 hour.')">Open Notes</button></div></section><section id='tests'><div class='card test-box'><h2>Online Test</h2><p>Click to start quick grammar test.</p><button onclick='startTest()'>Start Test</button><button onclick="alert('Weekly Mock Test Loaded')">Weekly Test</button><p id='testResult'></p></div></section>
-<section id='speaking'><div class='card speak-box'><h2>Voice Speaking Practice</h2><p>Click and practice speaking confidence.</p><button onclick='speakNow()'>Start Speaking</button><button onclick="showLesson('Speaking Topic: Describe your hometown in English for 1 minute. Then describe your future goals.')">Topic</button><p id='speakText'></p></div></section>
-<section id='login'><div class='card'><h2>Student Login</h2><input id='email' placeholder='Email'><input id='password' type='password' placeholder='Password'><button onclick='loginUser()'>Login</button><p id='loginMsg'></p></div></section>
-<section id='downloads'><div class='card'><h2>Student Preparation Tools</h2><p>Daily practice, weekly tests, IELTS plan, vocabulary sheets and speaking tasks.</p><button onclick="alert('Coming Soon: PDF Notes & Certificates')">Open Tools</button></div></section><section id='studyviewer'><div class='card'><h2>Study Room</h2><p id='lessonBox'>Select any course to start studying.</p></div></section><footer>© 2026 Imaduddin English Learning Hub</footer><div class='card'><h2>Study Room</h2><p id='lessonBox'>Select any course to start studying.</p></div></section></footer>
+
+<header>Imaduddin English Learning Hub</header>
+
+<div id="loginPage" class="login-box">
+<div class="card">
+<h2>Student Login</h2>
+<input type="text" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+<button class="btn" onclick="login()">Login</button>
+<p id="msg"></p>
+</div>
+</div>
+
+<div id="dashboard" class="container hide">
+
+<div class="sidebar">
+<h2>Dashboard</h2>
+<button onclick="showSection('home')">Home</button>
+<button onclick="showSection('basic')">Basic English</button>
+<button onclick="showSection('intermediate')">Intermediate</button>
+<button onclick="showSection('advanced')">Advanced</button>
+<button onclick="showSection('ielts')">IELTS Zone</button>
+<button onclick="showSection('notes')">Notes</button>
+<button onclick="showSection('tests')">Tests</button>
+<button onclick="showSection('speaking')">Speaking</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="main">
+
+<div id="home" class="section">
+<div class="card">
+<h2>Welcome Student</h2>
+<p>Your progress this week:</p>
+<div class="progress"><div class="progress-bar"></div></div>
+</div>
+</div>
+
+<div id="basic" class="section hide">
+<div class="card">
+<h2>Basic English</h2>
+<p>Alphabet, Grammar, Daily Use Sentences, Vocabulary.</p>
+</div>
+</div>
+
+<div id="intermediate" class="section hide">
+<div class="card">
+<h2>Intermediate English</h2>
+<p>Tenses, Writing Skills, Communication Practice.</p>
+</div>
+</div>
+
+<div id="advanced" class="section hide">
+<div class="card">
+<h2>Advanced English</h2>
+<p>Professional Vocabulary, Fluency, Interviews.</p>
+</div>
+</div>
+
+<div id="ielts" class="section hide">
+<div class="card">
+<h2>IELTS Zone</h2>
+<p>Reading, Writing Task 1/2, Listening, Speaking.</p>
+</div>
+</div>
+
+<div id="notes" class="section hide">
+<div class="card">
+<h2>Study Notes</h2>
+<p>Grammar Notes, IELTS Plans, Vocabulary Sheets.</p>
+</div>
+</div>
+
+<div id="tests" class="section hide">
+<div class="card">
+<h2>Online Test</h2>
+<button class="btn" onclick="test()">Start Test</button>
+<p id="score"></p>
+</div>
+</div>
+
+<div id="speaking" class="section hide">
+<div class="card">
+<h2>Speaking Practice</h2>
+<p>Topic 1: Introduce Yourself</p>
+<p>Topic 2: Describe Your Hometown</p>
+</div>
+</div>
+
+</div>
+</div>
+
 <script>
-function startTest(){let score=Math.floor(Math.random()*100)+1;document.getElementById('testResult').innerText='Your Score: '+score+'%';}
-function speakNow(){document.getElementById('speakText').innerText='Speak now: Introduce yourself in English for 30 seconds.';}
-function showLesson(text){document.getElementById('lessonBox').innerText=text;window.location='#studyviewer';}
-function loginUser(){let e=document.getElementById('email').value;let p=document.getElementById('password').value;let m=document.getElementById('loginMsg');if(e && p){m.innerText='Login Successful! Welcome Student.';window.location='#dashboard';}else{m.innerText='Please enter email and password.';}}
+function login(){
+let email=document.getElementById("email").value;
+let password=document.getElementById("password").value;
+
+if(email && password){
+document.getElementById("loginPage").classList.add("hide");
+document.getElementById("dashboard").classList.remove("hide");
+}else{
+document.getElementById("msg").innerHTML="Enter Email & Password";
+}
+}
+
+function logout(){
+location.reload();
+}
+
+function showSection(id){
+let sections=document.querySelectorAll(".section");
+sections.forEach(sec=>sec.classList.add("hide"));
+document.getElementById(id).classList.remove("hide");
+}
+
+function test(){
+let score=Math.floor(Math.random()*41)+60;
+document.getElementById("score").innerHTML="Your Score: "+score+"%";
+}
 </script>
+
 </body>
 </html>
