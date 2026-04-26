@@ -17,13 +17,14 @@
 <div class='card'><h2>Advanced English</h2><p>Professional fluency, refined grammar, advanced vocabulary.</p></div>
 <div class='card'><h2>IELTS Zone</h2><p>Listening, Reading, Writing, Speaking mock practice.</p></div>
 </div></section>
-<section id='tests'><div class='card test-box'><h2>Online Test</h2><p>Click to start quick grammar test.</p><button onclick='startTest()'>Start Test</button><p id='testResult'></p></div></section>
+<section id='lessons'><div class='grid'><div class='card'><h2>Lesson 1: Basic Grammar</h2><p>Nouns, Pronouns, Verbs, Sentence Basics.</p></div><div class='card'><h2>Lesson 2: Intermediate Tenses</h2><p>Present, Past, Future with usage practice.</p></div><div class='card'><h2>Lesson 3: Advanced Vocabulary</h2><p>Professional words, fluent expressions, band score language.</p></div><div class='card'><h2>IELTS Preparation</h2><p>Reading strategies, Writing tasks, Listening tips, Speaking cues.</p></div></div></section><section id='tests'><div class='card test-box'><h2>Online Test</h2><p>Click to start quick grammar test.</p><button onclick='startTest()'>Start Test</button><p id='testResult'></p></div></section>
 <section id='speaking'><div class='card speak-box'><h2>Voice Speaking Practice</h2><p>Click and practice speaking confidence.</p><button onclick='speakNow()'>Start Speaking</button><p id='speakText'></p></div></section>
 <section id='login'><div class='card'><h2>Student Login</h2><input placeholder='Email'><input type='password' placeholder='Password'><button>Login</button></div></section>
-<footer>© 2026 Imaduddin English Learning Hub</footer>
+<section id='downloads'><div class='card'><h2>Student Preparation Tools</h2><p>Daily practice, weekly tests, IELTS plan, vocabulary sheets and speaking tasks.</p><button onclick="alert('Coming Soon: PDF Notes & Certificates')">Open Tools</button></div></section><footer>© 2026 Imaduddin English Learning Hub</footer>
 <script>
 function startTest(){let score=Math.floor(Math.random()*100)+1;document.getElementById('testResult').innerText='Your Score: '+score+'%';}
 function speakNow(){document.getElementById('speakText').innerText='Speak now: Introduce yourself in English for 30 seconds.';}
 </script>
 </body>
 </html>
+
