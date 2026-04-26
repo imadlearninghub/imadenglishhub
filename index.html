@@ -3,21 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Imaduddin English Learning Hub</title>
+<title>Imaduddin English Book Academy</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#0d1117;
-color:#ffffff;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0d1117;color:#fff}
 header{
 background:#161b22;
 padding:18px;
@@ -27,65 +17,37 @@ font-weight:bold;
 color:#58a6ff;
 border-bottom:1px solid #30363d;
 }
-
-.container{
-display:flex;
-min-height:100vh;
-}
-
+.container{display:flex;min-height:100vh}
 .sidebar{
-width:280px;
+width:300px;
 background:#161b22;
 padding:18px;
 overflow-y:auto;
 }
-
 .sidebar button{
 width:100%;
 padding:12px;
-margin:7px 0;
+margin:6px 0;
 border:none;
 border-radius:8px;
 background:#21262d;
 color:#fff;
 cursor:pointer;
 text-align:left;
-font-size:15px;
 }
-
-.sidebar button:hover{
-background:#58a6ff;
-}
-
-.main{
-flex:1;
-padding:24px;
-}
-
+.sidebar button:hover{background:#58a6ff}
+.main{flex:1;padding:24px}
 .card{
 background:#161b22;
 padding:24px;
 border-radius:12px;
 border:1px solid #30363d;
+line-height:1.9;
 margin-bottom:20px;
-line-height:1.8;
 }
-
-h2,h3{
-color:#58a6ff;
-margin-bottom:12px;
-}
-
-.hide{
-display:none;
-}
-
-.login{
-max-width:430px;
-margin:auto;
-margin-top:90px;
-}
-
+h2,h3{color:#58a6ff;margin-bottom:10px}
+.hide{display:none}
+.login{max-width:430px;margin:auto;margin-top:80px}
 input{
 width:100%;
 padding:12px;
@@ -95,7 +57,6 @@ border-radius:8px;
 background:#21262d;
 color:#fff;
 }
-
 .btn{
 width:100%;
 padding:12px;
@@ -104,26 +65,21 @@ border-radius:8px;
 background:#58a6ff;
 color:#fff;
 cursor:pointer;
-font-size:16px;
 }
 </style>
 </head>
 
 <body>
 
-<header>Imaduddin English Learning Hub</header>
+<header>Imaduddin English Book Academy</header>
 
 <div id="loginPage" class="login">
 <div class="card">
 <h2>Student Login</h2>
-
 <input id="email" placeholder="Email">
 <input id="pass" type="password" placeholder="Password">
-
 <button class="btn" onclick="login()">Login</button>
-
 <p id="msg"></p>
-
 </div>
 </div>
 
@@ -132,15 +88,16 @@ font-size:16px;
 <div class="sidebar">
 
 <button onclick="show('home')">🏠 Home</button>
-<button onclick="show('grammar')">📘 Grammar</button>
-<button onclick="show('vocabulary')">📗 Vocabulary</button>
-<button onclick="show('speaking')">🎤 Speaking</button>
-<button onclick="show('writing')">✍️ Writing</button>
-<button onclick="show('reading')">📖 Reading</button>
-<button onclick="show('ielts')">🎯 IELTS</button>
-<button onclick="show('advanced')">💼 Advanced</button>
-<button onclick="show('tests')">📝 Tests</button>
-<button onclick="show('notes')">📄 Notes</button>
+
+<button onclick="show('noun')">📘 Grammar Ch 1 - Noun</button>
+<button onclick="show('pronoun')">📘 Grammar Ch 2 - Pronoun</button>
+<button onclick="show('verb')">📘 Grammar Ch 3 - Verb</button>
+<button onclick="show('tenses')">📘 Grammar Ch 4 - Tenses</button>
+
+<button onclick="show('vocab1')">📗 Vocabulary Ch 1</button>
+<button onclick="show('speak1')">🎤 Speaking Ch 1</button>
+<button onclick="show('ielts1')">🎯 IELTS Ch 1</button>
+
 <button onclick="logout()">🚪 Logout</button>
 
 </div>
@@ -150,288 +107,240 @@ font-size:16px;
 <div id="home" class="page">
 <div class="card">
 <h2>Welcome Student</h2>
-<p>This is your complete English learning academy. Open any section from the left menu and start learning from beginner to advanced level.</p>
+<p>This is your Book Style Academy. Open chapters from the left side and study like real books.</p>
 </div>
-</div> 
-  
-<div id="grammar" class="page hide">
+</div>
+
+<div id="noun" class="page hide">
 <div class="card">
-<h2>Full Grammar Book</h2>
+<h2>Grammar Chapter 1 - Noun</h2>
 
-<h3>1. Noun</h3>
-<p>A noun is the name of a person, place, animal, thing, or idea.</p>
-<p>Examples: Ali, Karachi, Cat, Book, Love</p>
+<p><b>Definition:</b> A noun is the name of a person, place, animal, thing, or idea.</p>
 
-<h3>2. Pronoun</h3>
-<p>A pronoun is used instead of a noun.</p>
-<p>Examples: He, She, It, They, We</p>
+<p><b>Examples:</b><br>
+Ali, Karachi, Cat, Book, Love</p>
 
-<h3>3. Verb</h3>
-<p>A verb shows action or state.</p>
-<p>Examples: Run, Eat, Sleep, Is, Are</p>
+<p><b>Types of Noun:</b></p>
+<p>1. Proper Noun = Imad, Pakistan</p>
+<p>2. Common Noun = boy, city</p>
+<p>3. Collective Noun = team, class</p>
+<p>4. Abstract Noun = honesty, beauty</p>
 
-<h3>4. Adjective</h3>
-<p>An adjective describes a noun.</p>
-<p>Examples: Beautiful girl, Big house</p>
-
-<h3>5. Adverb</h3>
-<p>An adverb describes a verb, adjective, or another adverb.</p>
-<p>Examples: Slowly, Quickly, Very</p>
-
-<h3>6. Preposition</h3>
-<p>Shows relation of place/time.</p>
-<p>Examples: in, on, at, under, behind</p>
-
-<h3>7. Conjunction</h3>
-<p>Joins words or sentences.</p>
-<p>Examples: and, but, because</p>
-
-<h3>8. Interjection</h3>
-<p>Expresses sudden feeling.</p>
-<p>Examples: Wow! Oh! Alas!</p>
-
-<h3>9. Articles</h3>
-<p>A, An, The</p>
-
-<h3>10. Singular / Plural</h3>
-<p>Book → Books, Child → Children</p>
-
-<h3>11. Tenses</h3>
-<p>Present, Past, Future with 12 forms.</p>
-
-<h3>12. Active / Passive</h3>
-<p>Ali wrote a letter. / A letter was written by Ali.</p>
-
-<h3>13. Direct / Indirect</h3>
-<p>He said, “I am happy.” / He said that he was happy.</p>
-
-<h3>14. Modals</h3>
-<p>can, could, may, might, should, must</p>
-
-<h3>15. Conditionals</h3>
-<p>If you study, you will pass.</p>
-
-<h3>16. Subject Verb Agreement</h3>
-<p>He goes. They go.</p>
-
-<h3>17. Common Errors</h3>
-<p>Wrong: He go school.</p>
-<p>Correct: He goes to school.</p>
+<p><b>Exercise:</b><br>
+Find nouns in sentence: Ali has a book.</p>
 
 </div>
 </div>
 
 
-<div id="vocabulary" class="page hide">
+<div id="pronoun" class="page hide">
 <div class="card">
-<h2>Vocabulary Full Book</h2>
+<h2>Grammar Chapter 2 - Pronoun</h2>
 
-<h3>Basic Words</h3>
-<p>Happy, Sad, Fast, Slow, Good, Bad, Big, Small</p>
+<p><b>Definition:</b> A pronoun is used instead of a noun.</p>
 
-<h3>Daily Use Words</h3>
-<p>Water, Food, House, Market, School, Friend</p>
+<p><b>Examples:</b><br>
+He, She, It, They, We, You</p>
 
-<h3>Advanced Words</h3>
-<p>Brilliant, Accurate, Professional, Efficient, Reliable</p>
+<p><b>Example Sentence:</b><br>
+Ali is a student. He studies daily.</p>
 
-<h3>Synonyms</h3>
-<p>Big = Large</p>
-<p>Small = Tiny</p>
-<p>Fast = Quick</p>
+<p><b>Types:</b></p>
+<p>Personal Pronoun = I, We</p>
+<p>Possessive Pronoun = Mine, Yours</p>
 
-<h3>Antonyms</h3>
-<p>Hot = Cold</p>
-<p>Good = Bad</p>
-<p>Happy = Sad</p>
-
-<h3>Phrases</h3>
-<p>How are you?</p>
-<p>Nice to meet you.</p>
-<p>Take care.</p>
-
-<h3>Idioms</h3>
-<p>Break the ice = Start conversation</p>
-<p>Piece of cake = Very easy</p>
+<p><b>Exercise:</b><br>
+Replace noun with pronoun: Sara is happy. ___ is happy.</p>
 
 </div>
 </div>
 
-<div id="speaking" class="page hide">
+
+<div id="verb" class="page hide">
 <div class="card">
-<h2>Speaking Full Course</h2>
+<h2>Grammar Chapter 3 - Verb</h2>
 
-<h3>Self Introduction</h3>
-<p>My name is Imad. I am from Pakistan. I am learning English to improve my future.</p>
+<p><b>Definition:</b> A verb shows action or state.</p>
 
-<h3>Daily Conversation</h3>
-<p>Hello, how are you?</p>
-<p>I am fine. What about you?</p>
-<p>I am doing great.</p>
+<p><b>Examples:</b><br>
+Run, Eat, Sleep, Write, Is, Are</p>
 
-<h3>At Market</h3>
-<p>How much is this item?</p>
-<p>It costs 500 rupees.</p>
+<p><b>Sentences:</b><br>
+I run daily.<br>
+She is happy.</p>
 
-<h3>At Interview</h3>
-<p>Tell me about yourself.</p>
-<p>I am hardworking and eager to learn new skills.</p>
+<p><b>Types:</b></p>
+<p>Action Verb = play, work</p>
+<p>Helping Verb = is, am, are</p>
 
-<h3>Fluency Tips</h3>
-<p>Speak daily, think in English, use simple sentences, do not fear mistakes.</p>
+<p><b>Exercise:</b><br>
+Find verb: Ali reads a newspaper.</p>
 
 </div>
 </div>
 
 
-<div id="writing" class="page hide">
+<div id="tenses" class="page hide">
 <div class="card">
-<h2>Writing Full Course</h2>
+<h2>Grammar Chapter 4 - Tenses</h2>
 
-<h3>Paragraph Writing</h3>
-<p>My School is a wonderful place where I learn many useful things every day.</p>
+<p><b>Present Indefinite:</b><br>
+I play cricket.</p>
 
-<h3>Email Writing</h3>
-<p>Dear Sir,<br>I am writing to apply for the position...</p>
+<p><b>Present Continuous:</b><br>
+I am reading.</p>
 
-<h3>Application Writing</h3>
-<p>To,<br>The Principal,<br>Subject: Leave Application</p>
+<p><b>Past Indefinite:</b><br>
+I went to school.</p>
 
-<h3>Essay Writing</h3>
-<p>Importance of Education: Education plays a key role in success and growth.</p>
+<p><b>Future Indefinite:</b><br>
+I will help you.</p>
 
-<h3>Writing Tips</h3>
-<p>Use clear grammar, proper punctuation, and paragraph structure.</p>
+<p><b>Tip:</b> Tense shows time of action.</p>
 
 </div>
 </div>
 
-
-<div id="reading" class="page hide">
+<div id="vocab1" class="page hide">
 <div class="card">
-<h2>Reading Full Course</h2>
+<h2>Vocabulary Chapter 1</h2>
 
-<h3>Passage 1</h3>
-<p>Ali is a hardworking student. He studies daily and respects his teachers.</p>
+<p><b>Basic Words:</b></p>
+<p>Happy = Khush</p>
+<p>Sad = Udaas</p>
+<p>Big = Bara</p>
+<p>Small = Chota</p>
+<p>Fast = Tez</p>
+<p>Slow = Ahista</p>
 
-<h3>Question</h3>
-<p>Who is Ali?</p>
-<p>Answer: Ali is a hardworking student.</p>
+<p><b>Daily Use Words:</b></p>
+<p>Water, Food, House, School, Friend, Market</p>
 
-<h3>Reading Tips</h3>
-<p>Read carefully, understand keywords, then answer questions.</p>
-
-<h3>Skimming</h3>
-<p>Read quickly to understand general idea.</p>
-
-<h3>Scanning</h3>
-<p>Search specific information like names, dates, numbers.</p>
+<p><b>Exercise:</b><br>
+Use the word Happy in one sentence.</p>
 
 </div>
 </div>
 
-<div id="ielts" class="page hide">
+
+<div id="speak1" class="page hide">
 <div class="card">
-<h2>IELTS Full Course</h2>
+<h2>Speaking Chapter 1</h2>
 
-<h3>Listening</h3>
-<p>Listen carefully for names, dates, spellings, and numbers.</p>
+<p><b>Self Introduction:</b></p>
+<p>Hello, my name is Imad. I am from Pakistan. I am learning English to improve my future.</p>
 
-<h3>Reading</h3>
-<p>First skim the passage, then scan for keywords.</p>
+<p><b>Daily Conversation:</b></p>
+<p>A: How are you?</p>
+<p>B: I am fine. Thank you.</p>
 
-<h3>Writing Task 1</h3>
-<p>Describe charts, graphs, and processes using overview and comparisons.</p>
+<p><b>Practice:</b></p>
+<p>Speak your introduction for 1 minute.</p>
 
-<h3>Writing Task 2</h3>
-<p>Use introduction, body paragraph 1, body paragraph 2, conclusion.</p>
+</div>
+</div>
 
-<h3>Speaking Part 1</h3>
+
+<div id="ielts1" class="page hide">
+<div class="card">
+<h2>IELTS Chapter 1</h2>
+
+<p><b>Speaking Question:</b></p>
 <p>Where do you live?</p>
-<p>I live in Pakistan. It is a beautiful country.</p>
 
-<h3>Band 7+ Tips</h3>
-<p>Use grammar correctly, speak naturally, and organize ideas clearly.</p>
+<p><b>Sample Answer:</b></p>
+<p>I live in Pakistan. It is a peaceful and beautiful country.</p>
 
-</div>
-</div>
+<p><b>Reading Tip:</b></p>
+<p>Read questions first, then scan the passage.</p>
 
-
-<div id="advanced" class="page hide">
-<div class="card">
-<h2>Advanced English</h2>
-
-<h3>Professional Communication</h3>
-<p>I would like to discuss this matter with you.</p>
-<p>Please let me know your availability.</p>
-
-<h3>Business Vocabulary</h3>
-<p>Meeting, Project, Deadline, Report, Strategy, Growth</p>
-
-<h3>Interview English</h3>
-<p>I am motivated, disciplined, and always ready to learn.</p>
-
-<h3>Advanced Fluency</h3>
-<p>Consistent practice builds confidence and communication skills.</p>
-
-</div>
-</div>
-
-
-<div id="tests" class="page hide">
-<div class="card">
-<h2>Tests Section</h2>
-
-<h3>Grammar Test</h3>
-<p>Choose correct sentence:</p>
-<p>A) He go school</p>
-<p>B) He goes to school</p>
-
-<h3>Vocabulary Test</h3>
-<p>Synonym of Big:</p>
-<p>A) Tiny</p>
-<p>B) Large</p>
-
-<h3>Speaking Test</h3>
-<p>Introduce yourself in English for 1 minute.</p>
-
-<h3>IELTS Mock</h3>
-<p>Describe your hometown.</p>
-
-</div>
-</div>
-
-
-<div id="notes" class="page hide">
-<div class="card">
-<h2>Notes Library</h2>
-
-<h3>Grammar Notes</h3>
-<p>Noun = Name of person/place/thing.</p>
-
-<h3>Tense Notes</h3>
-<p>Present = current time, Past = previous time, Future = upcoming time.</p>
-
-<h3>IELTS Notes</h3>
-<p>Writing requires structure and clear ideas.</p>
-
-<h3>Vocabulary Notes</h3>
-<p>Learn 10 new words daily.</p>
+<p><b>Writing Tip:</b></p>
+<p>Use introduction, body, and conclusion.</p>
 
 </div>
 </div>
   
+<div id="writing1" class="page hide">
+<div class="card">
+<h2>Writing Chapter 1</h2>
+
+<p><b>Paragraph Writing:</b></p>
+<p>My School is a beautiful place where I learn many useful things every day. My teachers are kind and helpful.</p>
+
+<p><b>Email Writing:</b></p>
+<p>Dear Sir,<br>
+I am writing to request information regarding your course.</p>
+
+<p><b>Practice:</b></p>
+<p>Write 5 lines about your hometown.</p>
+
+</div>
+</div>
+
+
+<div id="reading1" class="page hide">
+<div class="card">
+<h2>Reading Chapter 1</h2>
+
+<p><b>Passage:</b></p>
+<p>Ali is a hardworking student. He studies daily and respects his teachers. He wants to become a doctor.</p>
+
+<p><b>Questions:</b></p>
+<p>1. Who is Ali?</p>
+<p>2. What does he want to become?</p>
+
+<p><b>Answers:</b></p>
+<p>1. Ali is a hardworking student.</p>
+<p>2. He wants to become a doctor.</p>
+
+</div>
+</div>
+
+
+<div id="advanced1" class="page hide">
+<div class="card">
+<h2>Advanced English Chapter 1</h2>
+
+<p><b>Professional Sentence:</b></p>
+<p>I would like to discuss this matter with you.</p>
+
+<p><b>Interview Answer:</b></p>
+<p>I am a motivated person who enjoys learning new skills.</p>
+
+<p><b>Business Words:</b></p>
+<p>Meeting, Project, Deadline, Strategy, Growth</p>
+
+</div>
+</div>
+
+
+<div id="tests1" class="page hide">
+<div class="card">
+<h2>Test Chapter 1</h2>
+
+<p><b>Choose Correct Sentence:</b></p>
+<p>A) He go to school.</p>
+<p>B) He goes to school.</p>
+
+<p><b>Answer:</b> B</p>
+
+<p><b>Vocabulary:</b></p>
+<p>Synonym of Big = Large</p>
+
+</div>
+</div>
+
 </div> <!-- END main -->
-</div> <!-- END container -->
+</div> <!-- END app -->
 
 <script>
 
 function login(){
 if(email.value && pass.value){
-document.getElementById('loginPage').classList.add('hide');
-document.getElementById('app').classList.remove('hide');
+document.getElementById("loginPage").classList.add("hide");
+document.getElementById("app").classList.remove("hide");
 }else{
-document.getElementById('msg').innerHTML="Enter Email & Password";
+document.getElementById("msg").innerHTML="Enter Email & Password";
 }
 }
 
@@ -440,13 +349,14 @@ location.reload();
 }
 
 function show(id){
-let pages=document.querySelectorAll('.page');
-pages.forEach(p=>p.classList.add('hide'));
-document.getElementById(id).classList.remove('hide');
+let pages=document.querySelectorAll(".page");
+pages.forEach(function(p){
+p.classList.add("hide");
+});
+document.getElementById(id).classList.remove("hide");
 }
 
 </script>
 
 </body>
 </html>
-
