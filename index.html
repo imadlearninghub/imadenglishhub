@@ -5,191 +5,158 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imaduddin English Learning Hub</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-body{
-background:#0d1117;
-color:#fff;
-}
-header{
-background:#161b22;
-padding:20px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-color:#58a6ff;
-border-bottom:1px solid #30363d;
-}
-.container{
-display:flex;
-min-height:100vh;
-}
-.sidebar{
-width:250px;
-background:#161b22;
-padding:20px;
-border-right:1px solid #30363d;
-}
-.sidebar h2{
-margin-bottom:20px;
-color:#58a6ff;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0d1117;color:#fff}
+header{background:#161b22;padding:20px;text-align:center;font-size:28px;color:#58a6ff;font-weight:bold}
+.container{display:flex;min-height:100vh}
+.sidebar{width:260px;background:#161b22;padding:20px}
 .sidebar button{
-width:100%;
-padding:12px;
-margin-bottom:10px;
-background:#21262d;
-color:#fff;
-border:none;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
+width:100%;padding:12px;margin:8px 0;
+background:#21262d;color:#fff;border:none;
+border-radius:8px;cursor:pointer
 }
-.sidebar button:hover{
-background:#58a6ff;
-}
-.main{
-flex:1;
-padding:30px;
-}
+.sidebar button:hover{background:#58a6ff}
+.main{flex:1;padding:25px}
 .card{
-background:#161b22;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-border:1px solid #30363d;
+background:#161b22;padding:20px;
+border-radius:12px;margin-bottom:20px;
+border:1px solid #30363d
 }
+.hide{display:none}
+h2{color:#58a6ff;margin-bottom:10px}
+ul{padding-left:20px;line-height:1.8}
 input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:8px;
-background:#21262d;
-color:#fff;
-}
-.login-box{
-max-width:400px;
-margin:auto;
-margin-top:80px;
+width:100%;padding:12px;margin:10px 0;
+border:none;border-radius:8px;background:#21262d;color:#fff
 }
 .btn{
-background:#58a6ff;
-color:#fff;
-padding:12px;
-border:none;
-width:100%;
-border-radius:8px;
-cursor:pointer;
+background:#58a6ff;color:#fff;padding:12px;
+border:none;border-radius:8px;width:100%;cursor:pointer
 }
-.progress{
-background:#21262d;
-height:12px;
-border-radius:20px;
-overflow:hidden;
-margin-top:10px;
-}
-.progress-bar{
-height:100%;
-background:#58a6ff;
-width:65%;
-}
-.hide{
-display:none;
-}
+.login{max-width:420px;margin:auto;margin-top:80px}
 </style>
 </head>
 <body>
 
 <header>Imaduddin English Learning Hub</header>
 
-<div id="loginPage" class="login-box">
+<div id="loginPage" class="login">
 <div class="card">
 <h2>Student Login</h2>
 <input type="text" id="email" placeholder="Email">
-<input type="password" id="password" placeholder="Password">
+<input type="password" id="pass" placeholder="Password">
 <button class="btn" onclick="login()">Login</button>
 <p id="msg"></p>
 </div>
 </div>
 
-<div id="dashboard" class="container hide">
+<div id="app" class="container hide">
 
 <div class="sidebar">
-<h2>Dashboard</h2>
-<button onclick="showSection('home')">Home</button>
-<button onclick="showSection('basic')">Basic English</button>
-<button onclick="showSection('intermediate')">Intermediate</button>
-<button onclick="showSection('advanced')">Advanced</button>
-<button onclick="showSection('ielts')">IELTS Zone</button>
-<button onclick="showSection('notes')">Notes</button>
-<button onclick="showSection('tests')">Tests</button>
-<button onclick="showSection('speaking')">Speaking</button>
+<button onclick="show('home')">Home</button>
+<button onclick="show('basic')">Basic English</button>
+<button onclick="show('intermediate')">Intermediate</button>
+<button onclick="show('advanced')">Advanced</button>
+<button onclick="show('ielts')">IELTS Zone</button>
+<button onclick="show('notes')">Notes</button>
+<button onclick="show('tests')">Tests</button>
+<button onclick="show('speaking')">Speaking</button>
 <button onclick="logout()">Logout</button>
 </div>
 
 <div class="main">
 
-<div id="home" class="section">
+<div id="home" class="page">
 <div class="card">
 <h2>Welcome Student</h2>
-<p>Your progress this week:</p>
-<div class="progress"><div class="progress-bar"></div></div>
+<p>Start learning from sidebar menu.</p>
 </div>
 </div>
 
-<div id="basic" class="section hide">
+<div id="basic" class="page hide">
 <div class="card">
-<h2>Basic English</h2>
-<p>Alphabet, Grammar, Daily Use Sentences, Vocabulary.</p>
+<h2>Basic English Course</h2>
+<ul>
+<li>Alphabet A-Z</li>
+<li>Greetings: Hello, How are you?</li>
+<li>Daily Sentences</li>
+<li>Noun, Pronoun, Verb</li>
+<li>50 Basic Vocabulary Words</li>
+</ul>
 </div>
 </div>
 
-<div id="intermediate" class="section hide">
+<div id="intermediate" class="page hide">
 <div class="card">
 <h2>Intermediate English</h2>
-<p>Tenses, Writing Skills, Communication Practice.</p>
+<ul>
+<li>Present / Past / Future Tenses</li>
+<li>Paragraph Writing</li>
+<li>Conversation Practice</li>
+<li>Email Writing</li>
+<li>100 Mid Vocabulary Words</li>
+</ul>
 </div>
 </div>
 
-<div id="advanced" class="section hide">
+<div id="advanced" class="page hide">
 <div class="card">
 <h2>Advanced English</h2>
-<p>Professional Vocabulary, Fluency, Interviews.</p>
+<ul>
+<li>Professional Communication</li>
+<li>Interview Speaking</li>
+<li>Business English</li>
+<li>Advanced Grammar</li>
+<li>200 Advanced Vocabulary</li>
+</ul>
 </div>
 </div>
 
-<div id="ielts" class="section hide">
+<div id="ielts" class="page hide">
 <div class="card">
-<h2>IELTS Zone</h2>
-<p>Reading, Writing Task 1/2, Listening, Speaking.</p>
+<h2>IELTS Preparation</h2>
+<ul>
+<li>Reading Strategies</li>
+<li>Listening Practice</li>
+<li>Writing Task 1 & 2</li>
+<li>Speaking Cue Cards</li>
+<li>Band 7+ Tips</li>
+</ul>
 </div>
 </div>
 
-<div id="notes" class="section hide">
+<div id="notes" class="page hide">
 <div class="card">
 <h2>Study Notes</h2>
-<p>Grammar Notes, IELTS Plans, Vocabulary Sheets.</p>
+<ul>
+<li>Tenses Summary Notes</li>
+<li>Vocabulary Sheets</li>
+<li>Grammar Rules</li>
+<li>Daily Study Plan</li>
+</ul>
 </div>
 </div>
 
-<div id="tests" class="section hide">
+<div id="tests" class="page hide">
 <div class="card">
 <h2>Online Test</h2>
-<button class="btn" onclick="test()">Start Test</button>
-<p id="score"></p>
+<p>Question: Choose correct sentence</p>
+<ul>
+<li>A) He go to school</li>
+<li>B) He goes to school</li>
+</ul>
+<button class="btn" onclick="alert('Correct Answer: B')">Show Answer</button>
 </div>
 </div>
 
-<div id="speaking" class="section hide">
+<div id="speaking" class="page hide">
 <div class="card">
 <h2>Speaking Practice</h2>
-<p>Topic 1: Introduce Yourself</p>
-<p>Topic 2: Describe Your Hometown</p>
+<ul>
+<li>Introduce yourself in English.</li>
+<li>Describe your hometown.</li>
+<li>Talk about your future goals.</li>
+</ul>
 </div>
 </div>
 
@@ -198,30 +165,17 @@ display:none;
 
 <script>
 function login(){
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-
-if(email && password){
-document.getElementById("loginPage").classList.add("hide");
-document.getElementById("dashboard").classList.remove("hide");
+if(email.value && pass.value){
+loginPage.classList.add('hide');
+app.classList.remove('hide');
 }else{
-document.getElementById("msg").innerHTML="Enter Email & Password";
+msg.innerHTML="Enter Email & Password";
 }
 }
-
-function logout(){
-location.reload();
-}
-
-function showSection(id){
-let sections=document.querySelectorAll(".section");
-sections.forEach(sec=>sec.classList.add("hide"));
-document.getElementById(id).classList.remove("hide");
-}
-
-function test(){
-let score=Math.floor(Math.random()*41)+60;
-document.getElementById("score").innerHTML="Your Score: "+score+"%";
+function logout(){location.reload();}
+function show(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.add('hide'));
+document.getElementById(id).classList.remove('hide');
 }
 </script>
 
