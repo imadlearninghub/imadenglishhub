@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Imaduddin English Hub</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background:#0f172a;color:#fff}header{padding:40px;text-align:center;background:linear-gradient(135deg,#1e293b,#2563eb)}h1{font-size:42px}nav{display:flex;justify-content:center;gap:15px;padding:15px;background:#111827;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;padding:10px 16px;background:#1f2937;border-radius:10px}section{padding:40px;max-width:1200px;margin:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.card{background:#1e293b;padding:25px;border-radius:18px;box-shadow:0 10px 20px rgba(0,0,0,.3)}button{padding:12px 18px;border:none;border-radius:10px;background:#2563eb;color:#fff;cursor:pointer}.hero{font-size:20px;color:#cbd5e1;margin-top:10px}footer{text-align:center;padding:25px;background:#111827;margin-top:30px}.test-box,.speak-box{text-align:center}.hidden{display:none}input{width:100%;padding:12px;border-radius:10px;border:none;margin:8px 0}
+</style>
+</head>
+<body>
+<header><h1>Imaduddin English Learning Hub</h1><p class='hero'>Basic to Advanced English • IELTS Zone • Speaking Practice</p></header>
+<nav><a href='#courses'>Courses</a><a href='#tests'>Tests</a><a href='#speaking'>Speaking</a><a href='#login'>Login</a></nav>
+<section id='courses'><div class='grid'>
+<div class='card'><h2>Basic English</h2><p>Grammar, vocabulary, daily use English, greetings.</p></div>
+<div class='card'><h2>Intermediate English</h2><p>Communication, tenses, writing, conversation skills.</p></div>
+<div class='card'><h2>Advanced English</h2><p>Professional fluency, refined grammar, advanced vocabulary.</p></div>
+<div class='card'><h2>IELTS Zone</h2><p>Listening, Reading, Writing, Speaking mock practice.</p></div>
+</div></section>
+<section id='tests'><div class='card test-box'><h2>Online Test</h2><p>Click to start quick grammar test.</p><button onclick='startTest()'>Start Test</button><p id='testResult'></p></div></section>
+<section id='speaking'><div class='card speak-box'><h2>Voice Speaking Practice</h2><p>Click and practice speaking confidence.</p><button onclick='speakNow()'>Start Speaking</button><p id='speakText'></p></div></section>
+<section id='login'><div class='card'><h2>Student Login</h2><input placeholder='Email'><input type='password' placeholder='Password'><button>Login</button></div></section>
+<footer>© 2026 Imaduddin English Learning Hub</footer>
+<script>
+function startTest(){let score=Math.floor(Math.random()*100)+1;document.getElementById('testResult').innerText='Your Score: '+score+'%';}
+function speakNow(){document.getElementById('speakText').innerText='Speak now: Introduce yourself in English for 30 seconds.';}
+</script>
+</body>
+</html>
